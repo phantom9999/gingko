@@ -8,9 +8,9 @@ source ./build.conf
 export CMAKE_INCLUDE_PATH=${include_path}
 export CMAKE_LIBRARY_PATH=${library_path}
 
-rm -fr ${OUTPUT}
+rm -fr ${OUTPUT} ${BUILD}
 mkdir -p ${OUTPUT} ${BUILD}
-cd ${BUILD} && cmake .. -DCMAKE_INSTALL_PREFIX=${OUTPUT}/ && make && make install && cd ..
+cd ${BUILD} && cmake .. -DCMAKE_INSTALL_PREFIX=${OUTPUT}/ && make -j4 && make install && cd ..
 
 mkdir -p output/log
 cd output && tar --owner=0 --group=0 --mode=-s --mode=go-w -czvf bbts_tracker.tar.gz bin conf log

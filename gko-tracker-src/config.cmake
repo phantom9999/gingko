@@ -1,5 +1,5 @@
 find_path(BOOST_H NAMES boost/system/error_code.hpp)
-find_path(TR1_H NAMES tr1/functional)
+find_path(TR1_H NAMES boost/tr1/tr1/functional)
 find_library(BOOST_SYSTEM_LIB NAMES boost_system)
 find_library(BOOST_THREAD_LIB NAMES boost_thread)
 if(NOT BOOST_H OR NOT TR1_H OR NOT BOOST_SYSTEM_LIB OR NOT BOOST_THREAD_LIB)

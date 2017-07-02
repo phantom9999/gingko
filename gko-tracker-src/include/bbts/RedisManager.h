@@ -5,7 +5,7 @@
 
 #include <boost/noncopyable.hpp>
 #include <boost/thread.hpp>
-#include <hiredis.h>
+#include <hiredis/hiredis.h>
 
 #include "bbts/LazySingleton.hpp"
 #include "bbts/ThreadSingleton.hpp"
