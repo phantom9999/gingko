@@ -8,7 +8,9 @@ source ./build.conf
 export CMAKE_INCLUDE_PATH=${include_path}
 export CMAKE_LIBRARY_PATH=${library_path}
 
-protoc src/*.proto --cpp_out=.
+cd src/
+protoc *.proto --cpp_out=.
+cd -
 cp -f src/*.pb.h include/bbts/tracker/
 
 rm -fr ${OUTPUT} ${BUILD}
