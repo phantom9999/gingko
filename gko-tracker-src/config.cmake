@@ -41,7 +41,7 @@ if(NOT GLOG_H OR NOT GLOG_LIB)
     message(FATAL_ERROR "glog not found.")
 endif()
 
-find_path(HIREDIS_H NAMES hiredis.h)
+find_path(HIREDIS_H NAMES hiredis/hiredis.h)
 find_library(HIREDIS_LIB NAMES hiredis)
 if(NOT HIREDIS_H OR NOT HIREDIS_LIB)
     message(FATAL_ERROR "hiredis not found.")

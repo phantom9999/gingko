@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 cd "$(dirname "$0")"
 ROOT_DIR=$(pwd)
 BUILD=${ROOT_DIR}/build
