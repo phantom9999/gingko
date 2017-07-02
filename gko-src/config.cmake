@@ -11,7 +11,7 @@ if(NOT CURL_H OR NOT CURL_LIB)
 endif()
 
 find_path(BOOST_H NAMES boost/system/error_code.hpp)
-find_path(TR1_H NAMES tr1/functional)
+find_path(TR1_H NAMES boost/tr1/tr1/functional)
 find_library(BOOST_SYSTEM_LIB NAMES boost_system)
 find_library(BOOST_THREAD_LIB NAMES boost_thread)
 find_library(BOOST_REGEX_LIB NAMES boost_regex)

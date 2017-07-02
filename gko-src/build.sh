@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 cd "$(dirname "$0")"
 PACKAGE_DIR=$(pwd)
 
@@ -8,9 +9,18 @@ export CMAKE_LIBRARY_PATH=${library_path}
 BUILD=${PACKAGE_DIR}/build
 OUTPUT=${PACKAGE_DIR}/output
 
+cd group
+protoc *.proto --cpp_out=.
+cp -f *.pb.h ../include/bbts/
+cd -
+cd src
+protoc *.proto --cpp_out=.
+cp -f *.pb.h ../include/bbts/
+cd -
+
 rm -fr ${OUTPUT}
 mkdir -p ${OUTPUT} ${BUILD}
-cd ${BUILD} && cmake .. -DCMAKE_INSTALL_PREFIX=${OUTPUT}/ && make && make install && cd ..
+cd ${BUILD} && cmake .. -DCMAKE_INSTALL_PREFIX=${OUTPUT}/ && make -j4 && make install && cd ..
 
 TAR="tar --owner=0 --group=0 --mode=-s -zcpf"
 GINGKO_PACKAGE="bin conf lib NOAH"
