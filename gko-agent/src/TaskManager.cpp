@@ -22,7 +22,7 @@
 #include "bbts/agent/Task.h"
 #include "bbts/agent/TaskDB.h"
 #include "bbts/BBTSTorrentPlugin.h"
-#include "bbts/configure.pb.h"
+#include "../proto/configure.pb.h"
 #include "bbts/constant_def.h"
 #include "bbts/ErrorCategory.h"
 #include "bbts/host_info_util.h"

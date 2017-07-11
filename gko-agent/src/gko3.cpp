@@ -16,7 +16,7 @@
 #include <netdb.h>
 #include <pwd.h>
 
-#include "bbts/configure.pb.h"
+#include "../proto/configure.pb.h"
 #include "bbts/common_def.h"
 #include "bbts/host_info_util.h"
 #include "bbts/LazySingleton.hpp"

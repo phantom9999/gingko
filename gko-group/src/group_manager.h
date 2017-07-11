@@ -21,13 +21,13 @@
 #include <libtorrent/session.hpp>
 #include <thrift/server/TThreadPoolServer.h>
 
-#include "bbts/message.pb.h"
+#include "../gko-agent/proto/message.pb.h"
 #include "bbts/statistics.h"
 #include "bbts/ThriftTracker.h"
 #include "bbts/SpeedLimit.h"
 
 #include "define.h"
-#include "GroupManagerService.h"
+#include "thrift/GroupManagerService.h"
 #include "group_cluster_task.h"
 #include "group_task.h"
 #include "group_manager_service_handler.h"

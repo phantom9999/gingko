@@ -19,7 +19,7 @@
 #include "bbts/agent/Task.h"
 #include "bbts/agent/TaskManager.h"
 #include "bbts/common_def.h"
-#include "bbts/configure.pb.h"
+#include "../proto/configure.pb.h"
 #include "bbts/LazySingleton.hpp"
 #include "bbts/path.h"
 #include "bbts/pb_conf.h"

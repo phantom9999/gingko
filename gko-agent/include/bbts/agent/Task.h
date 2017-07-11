@@ -13,7 +13,7 @@
 #include <boost/smart_ptr.hpp>
 #include <libtorrent/torrent_handle.hpp>
 
-#include "bbts/message.pb.h"
+#include "../../../proto/message.pb.h"
 #include "bbts/statistics.h"
 
 namespace bbts {

@@ -20,7 +20,7 @@
 #include <boost/noncopyable.hpp>
 #include <boost/scoped_ptr.hpp>
 
-#include "bbts/message.pb.h"
+#include "../../../proto/message.pb.h"
 #include "bbts/UnixSocketConnection.h"
 
 namespace bbts {

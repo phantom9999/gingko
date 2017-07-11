@@ -15,7 +15,7 @@
 
 #include <dlfcn.h>
 
-#include "bbts/configure.pb.h"
+#include "../proto/configure.pb.h"
 #include "bbts/LazySingleton.hpp"
 #include "bbts/log.h"
 #include "bbts/path.h"

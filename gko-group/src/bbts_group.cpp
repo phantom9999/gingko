@@ -18,7 +18,7 @@
 #include "bbts/common_def.h"
 #include "bbts/path.h"
 
-#include "GroupConf.pb.h"
+#include "proto/GroupConf.pb.h"
 #include "group_manager.h"
 #include "group_params.h"
 #include "group_task.h"

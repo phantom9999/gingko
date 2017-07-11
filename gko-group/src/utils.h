@@ -16,8 +16,8 @@
 #include "bbts/tool/Downloader.h"
 #include "bbts/log.h"
 #include "define.h"
-#include "GroupConf.pb.h"
-#include "GroupManagerService.h"
+#include "proto/GroupConf.pb.h"
+#include "thrift/GroupManagerService.h"
 
 using ::bbts::tool::down_params_t;
 

@@ -22,7 +22,7 @@
 #include "bbts/Syms.h"
 #include "bbts/encode.h"
 
-#include "GroupConf.pb.h"
+#include "proto/GroupConf.pb.h"
 #include "group_manager.h"
 #include "utils.h"
 

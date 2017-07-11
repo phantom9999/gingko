@@ -31,7 +31,7 @@
 #include "bbts/log.h"
 #include "bbts/pb_conf.h"
 #include "bbts/tracker/Announce.h"
-#include "bbts/TrackerConf.pb.h"
+#include "../proto/TrackerConf.pb.h"
 
 using std::string;
 using std::vector;

@@ -11,7 +11,7 @@
 #include <vector>
 #include <stdint.h>
 
-#include "GroupManagerService.h"
+#include "thrift/GroupManagerService.h"
 
 namespace bbts {
 namespace group {

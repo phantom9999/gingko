@@ -14,8 +14,8 @@
 #include <thrift/transport/TSocket.h> 
 #include <thrift/transport/TTransportUtils.h>
 
-#include "GroupConf.pb.h"
-#include "GroupManagerService.h"
+#include "proto/GroupConf.pb.h"
+#include "thrift/GroupManagerService.h"
 #include "utils.h"
 
 using ::apache::thrift::protocol::TProtocol;

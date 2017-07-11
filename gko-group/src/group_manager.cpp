@@ -30,7 +30,7 @@
 #include "bbts/path.h"
 #include "bbts/util.h"
 #include "conf_range.h"
-#include "GroupConf.pb.h"
+#include "proto/GroupConf.pb.h"
 #include "group_manager_service_handler.h"
 #include "group_params.h"
 #include "utils.h"

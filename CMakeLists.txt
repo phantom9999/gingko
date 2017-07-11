@@ -19,7 +19,7 @@ set(SOURCE_FILES
         gko-agent/include/bbts/BBTSTorrentPlugin.h
         gko-agent/include/bbts/BTInfo.hpp
         gko-agent/include/bbts/common_def.h
-        gko-agent/include/bbts/configure.pb.h
+        gko-agent/proto/configure.pb.h
         gko-agent/include/bbts/ConsistentHashRing.hpp
         gko-agent/include/bbts/constant_def.h
         gko-agent/include/bbts/CUrl.h
@@ -28,7 +28,7 @@ set(SOURCE_FILES
         gko-agent/include/bbts/host_info_util.h
         gko-agent/include/bbts/LazySingleton.hpp
         gko-agent/include/bbts/log.h
-        gko-agent/include/bbts/message.pb.h
+        gko-agent/proto/message.pb.h
         gko-agent/include/bbts/number_util.h
         gko-agent/include/bbts/path.h
         gko-agent/include/bbts/pb_conf.h
@@ -41,7 +41,7 @@ set(SOURCE_FILES
         gko-agent/include/bbts/Syms.h
         gko-agent/include/bbts/ThriftTracker.h
         gko-agent/include/bbts/torrent_file_util.h
-        gko-agent/include/bbts/TrackerConf.pb.h
+        gko-agent/proto/TrackerConf.pb.h
         gko-agent/include/bbts/TypeLock.hpp
         gko-agent/include/bbts/UnixSocketClient.h
         gko-agent/include/bbts/UnixSocketConnection.h
@@ -54,7 +54,7 @@ set(SOURCE_FILES
         gko-agent/src/BBTSClient.cpp
         gko-agent/src/BBTSTorrentPlugin.cpp
         gko-agent/src/ClusterDownloader.cpp
-        gko-agent/src/configure.pb.cpp
+        gko-agent/proto/configure.pb.cpp
         gko-agent/src/CUrl.cpp
         gko-agent/src/delete_files.cpp
         gko-agent/src/Downloader.cpp
@@ -66,7 +66,7 @@ set(SOURCE_FILES
         gko-agent/src/host_info_util.cpp
         gko-agent/src/log.cpp
         gko-agent/src/make_torrent.cpp
-        gko-agent/src/message.pb.cpp
+        gko-agent/proto/message.pb.cpp
         gko-agent/src/number_util.cpp
         gko-agent/src/path.cpp
         gko-agent/src/socket_util.cpp
@@ -78,7 +78,7 @@ set(SOURCE_FILES
         gko-agent/src/TaskDB.cpp
         gko-agent/src/TaskManager.cpp
         gko-agent/src/ThriftTracker.cpp
-        gko-agent/src/TrackerConf.pb.cpp
+        gko-agent/proto/TrackerConf.pb.cpp
         gko-agent/src/UnixSocketClient.cpp
         gko-agent/src/UnixSocketConnection.cpp
         gko-agent/src/UnixSocketServer.cpp
@@ -198,11 +198,18 @@ ADD_EXECUTABLE(ControlByInfohash gko-tracker/clientmock/ControlByInfohash.cpp)
 TARGET_LINK_LIBRARIES(ControlByInfohash bbts_protocol)
 
 ##########################################################################
-include_directories(gko-group)
-aux_source_directory(gko-group GROUP_SRC)
+include_directories(gko-group/src)
+include_directories(gko-group/proto)
+include_directories(gko-group/thrift)
+
+aux_source_directory(gko-group/src GROUP_SRC)
+aux_source_directory(gko-group/proto GROUP_PROTO_SRC)
+aux_source_directory(gko-group/thrift GROUP_THRIFT_SRC)
 add_library(
         gko-group
         ${GROUP_SRC}
+        ${GROUP_PROTO_SRC}
+        ${GROUP_THRIFT_SRC}
 )
 
 ##########################################################################
