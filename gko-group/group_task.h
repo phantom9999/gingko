@@ -18,7 +18,7 @@
 #include "bbts/ThriftTracker.h"
 
 #include "group_cluster_task.h"
-#include "gen-cpp/GroupManagerService.h"
+#include "GroupManagerService.h"
 
 namespace bbts {
 namespace group {

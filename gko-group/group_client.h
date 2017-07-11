@@ -15,7 +15,7 @@
 #include <thrift/transport/TTransportUtils.h>
 
 #include "GroupConf.pb.h"
-#include "gen-cpp/GroupManagerService.h"
+#include "GroupManagerService.h"
 #include "utils.h"
 
 using ::apache::thrift::protocol::TProtocol;

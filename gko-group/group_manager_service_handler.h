@@ -11,7 +11,7 @@
 #include <vector>
 #include <stdint.h>
 
-#include "gen-cpp/GroupManagerService.h"
+#include "GroupManagerService.h"
 
 namespace bbts {
 namespace group {

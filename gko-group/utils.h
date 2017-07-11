@@ -17,7 +17,7 @@
 #include "bbts/log.h"
 #include "define.h"
 #include "GroupConf.pb.h"
-#include "gen-cpp/GroupManagerService.h"
+#include "GroupManagerService.h"
 
 using ::bbts::tool::down_params_t;
 
