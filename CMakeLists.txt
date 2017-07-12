@@ -3,6 +3,25 @@ project(gingko)
 
 set(CMAKE_CXX_STANDARD 11)
 
+########################################################################
+# 设置依赖
+
+set(
+        third
+        /root/.conan/data/Boost/1.60.0/lasote/stable/package/c4df0be554903c44e6c8dfefcb3478121c08b785
+        /root/gingko/output
+)
+
+include_directories(libtorrent-rasterbar/include)
+
+foreach (item ${third})
+    set(include_dir "${include_dir}:${PROJECT_SOURCE_DIR}${item}/include")
+    set(lib_dir "${lib_dir}:${PROJECT_SOURCE_DIR}${item}/lib")
+endforeach ()
+
+set(CMAKE_INCLUDE_PATH ${include_dir})
+set(CMAKE_LIBRARY_PATH ${lib_dir})
+
 
 ########################################################################
 # sqlite
