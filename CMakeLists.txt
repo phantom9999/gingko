@@ -8,8 +8,7 @@ set(CMAKE_CXX_STANDARD 11)
 
 set(
         third
-        /root/.conan/data/Boost/1.60.0/lasote/stable/package/c4df0be554903c44e6c8dfefcb3478121c08b785
-        /root/gingko/output
+        /usr/
 )
 
 include_directories(libtorrent-rasterbar/include)
