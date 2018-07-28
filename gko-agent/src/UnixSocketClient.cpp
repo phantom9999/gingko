@@ -16,6 +16,7 @@
 
 #include <boost/asio.hpp>
 #include <boost/bind.hpp>
+#include <boost/array.hpp>
 
 #include "bbts/log.h"
 

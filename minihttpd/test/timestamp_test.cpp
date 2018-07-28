@@ -1,5 +1,5 @@
 #include <pthread.h>
-#include "libminihttpd/timestamp.h"
+#include "minihttpd/timestamp.h"
 #include "gtest/gtest.h"
 #include "glog/logging.h"
 

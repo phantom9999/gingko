@@ -27,7 +27,7 @@
 #include "bbts/SpeedLimit.h"
 
 #include "define.h"
-#include "thrift/GroupManagerService.h"
+#include "GroupManagerService.h"
 #include "group_cluster_task.h"
 #include "group_task.h"
 #include "group_manager_service_handler.h"

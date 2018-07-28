@@ -1,21 +1,21 @@
-// ÆÕÍ¨Closure,
-// Closure: ->Run(),Closure¿ÉÔ¤Éè0~3¸ö²ÎÊý
-// Closure: ->Run(arg0),Closure¿ÉÔ¤Éè0~3¸ö²ÎÊý
-// Closure: ->Run(arg0,arg1),Closure¿ÉÔ¤Éè0~3¸ö²ÎÊý
-// Closure: ->Run(arg0,arg1,arg2),Closure¿ÉÔ¤Éè0~3¸ö²ÎÊý
+// ï¿½ï¿½Í¨Closure,
+// Closure: ->Run(),Closureï¿½ï¿½Ô¤ï¿½ï¿½0~3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+// Closure: ->Run(arg0),Closureï¿½ï¿½Ô¤ï¿½ï¿½0~3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+// Closure: ->Run(arg0,arg1),Closureï¿½ï¿½Ô¤ï¿½ï¿½0~3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+// Closure: ->Run(arg0,arg1,arg2),Closureï¿½ï¿½Ô¤ï¿½ï¿½0~3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 //
-// Closure: R=return x->Run(),Closure¿ÉÔ¤Éè0~3¸ö²ÎÊý
-// Closure: R=return x->Run(arg0),Closure¿ÉÔ¤Éè0~3¸ö²ÎÊý
-// Closure: R=return x->Run(arg0,arg1),Closure¿ÉÔ¤Éè0~3¸ö²ÎÊý
-// Closure: R=return x->Run(arg0,arg1,arg2),Closure¿ÉÔ¤Éè0~3¸ö²ÎÊý
+// Closure: R=return x->Run(),Closureï¿½ï¿½Ô¤ï¿½ï¿½0~3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+// Closure: R=return x->Run(arg0),Closureï¿½ï¿½Ô¤ï¿½ï¿½0~3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+// Closure: R=return x->Run(arg0,arg1),Closureï¿½ï¿½Ô¤ï¿½ï¿½0~3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+// Closure: R=return x->Run(arg0,arg1,arg2),Closureï¿½ï¿½Ô¤ï¿½ï¿½0~3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 // ////////////////////////////////////
 
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "libminihttpd/common.h"
-#include "libminihttpd/scoped_ptr.h"
-#include "libminihttpd/closure.h"
+#include "minihttpd/common.h"
+#include "minihttpd/scoped_ptr.h"
+#include "minihttpd/closure.h"
 #include "gtest/gtest.h"
 
 namespace argus {

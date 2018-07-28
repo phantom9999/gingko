@@ -1,7 +1,7 @@
 #include "bbts/encode_util.h"
 
-#include <assert.h>
-#include <stdint.h>
+#include <cassert>
+#include <cstdint>
 
 #include <string>
 
@@ -10,7 +10,7 @@
 using std::string;
 
 namespace bbts {
-
+/*
 inline static bool HexcharToDigit(char c, uint8_t *digit) {
   assert(digit);
   if (c >= '0' && c <= '9') {
@@ -74,7 +74,7 @@ bool HexToBase64(const string &hex, string* base64str) {
   if (!HexstrToBytes(hex, &bytes)) {
     return false;
   }
-  if (base64_encode(bytes, base64str) != 0) {
+  if (Base64Encode(bytes, base64str) != 0) {
     return false;
   }
   return true;
@@ -83,7 +83,7 @@ bool HexToBase64(const string &hex, string* base64str) {
 bool Base64ToHex(const string &base64str, string* hex) {
   assert(hex);
   string bytes;
-  if (base64_decode(base64str, &bytes) != 0) {
+  if (Base64Decode(base64str, &bytes) != 0) {
     return false;
   }
   if (!BytesToHex(bytes, hex)) {
@@ -91,5 +91,5 @@ bool Base64ToHex(const string &base64str, string* hex) {
   }
   return true;
 }
-
+*/
 } // namespace bbts

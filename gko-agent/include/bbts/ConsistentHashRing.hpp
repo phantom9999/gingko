@@ -25,7 +25,8 @@
 
 namespace bbts {
 
-static const uint32_t UINT32_MAX = 4294967295U;
+// 已经存在的宏
+// static const uint32_t UINT32_MAX = 4294967295U;
 
 static const uint32_t crc32tab[256] = {
     0x00000000, 0x77073096, 0xee0e612c, 0x990951ba,

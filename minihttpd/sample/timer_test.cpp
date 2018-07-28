@@ -1,5 +1,5 @@
-#include "libminihttpd/eventloop.h"
-#include "libminihttpd/minihttpd.h"
+#include "minihttpd/eventloop.h"
+#include "minihttpd/minihttpd.h"
 
 void oneTimeSchedulerFunc(int fd, short event, void *args) {
   LOG(WARNING) << "I run only once";

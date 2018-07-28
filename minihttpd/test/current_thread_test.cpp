@@ -1,7 +1,7 @@
 #include <assert.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "libminihttpd/current_thread.h"
+#include "minihttpd/current_thread.h"
 #include "gtest/gtest.h"
 
 TEST(current_threadTest, current_threadTest) 

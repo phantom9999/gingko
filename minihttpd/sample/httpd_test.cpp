@@ -1,6 +1,6 @@
-#include "libminihttpd/eventloop.h"
-#include "libminihttpd/minihttpd.h"
-#include "libminihttpd/monitor_helper.h"
+#include "minihttpd/eventloop.h"
+#include "minihttpd/minihttpd.h"
+#include "minihttpd/monitor_helper.h"
 #include <string>
 #include <sys/time.h>
 #include <time.h>

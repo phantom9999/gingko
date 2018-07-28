@@ -1,5 +1,5 @@
 #include <pthread.h>
-#include "libminihttpd/process_info.h"
+#include "minihttpd/process_info.h"
 #include "gtest/gtest.h"
 #include "glog/logging.h"
 

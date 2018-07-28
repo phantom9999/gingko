@@ -21,11 +21,11 @@ string getBaseName(const char* filepath) {
   }
   return string(filepath + i + 1, filepath + len);
 }
-
+/*
 string getBaseName(const string& filepath) {
   return getBaseName(filepath.c_str());
 }
-
+*/
 string getDirectory(const char* filepath) {
   size_t len = strlen(filepath);
   int i = static_cast<int>(len - 1);
@@ -37,11 +37,11 @@ string getDirectory(const char* filepath) {
     return string(filepath, filepath + i + 1);
   return "";
 }
-
+/*
 string getDirectory(const string& filepath) {
   return getDirectory(filepath.c_str());
 }
-
+*/
 
 } // namespace Path
 } // namespace common

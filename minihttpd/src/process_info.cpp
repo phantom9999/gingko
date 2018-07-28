@@ -1,11 +1,11 @@
 #include "minihttpd/process_info.h"
 #include "minihttpd/path.h"
 #include <algorithm>
-#include <assert.h>
+#include <cassert>
 #include <dirent.h>
 #include <pwd.h>
-#include <stdio.h> // snprintf
-#include <stdlib.h>
+#include <cstdio> // snprintf
+#include <cstdlib>
 #include <unistd.h>
 #include <sys/resource.h>
 #include <sys/time.h>
@@ -192,13 +192,13 @@ string ProcessInfo::binaryName() {
   // If fopen failed or the process is defunct,
   // read binary name from exe softlink.
   if (binary_name.empty()) {
-    binary_name = ::argus::common::Path::getBaseName(binaryPath());
+    binary_name = ::argus::common::Path::getBaseName(binaryPath().c_str());
   }
   return binary_name;
 }
 
 string ProcessInfo::binaryDirectory() {
   string path = binaryPath();
-  return ::argus::common::Path::getDirectory(path);
+  return ::argus::common::Path::getDirectory(path.c_str());
 }
 

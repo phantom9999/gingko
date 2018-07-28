@@ -1,5 +1,5 @@
-#include "libminihttpd/eventloop.h"
-#include "libminihttpd/minihttpd.h"
+#include "minihttpd/eventloop.h"
+#include "minihttpd/minihttpd.h"
 #include <string>
 #include <sys/time.h>
 #include <time.h>

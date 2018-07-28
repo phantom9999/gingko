@@ -1,5 +1,5 @@
 #include <pthread.h>
-#include "libminihttpd/strutil.h"
+#include "minihttpd/strutil.h"
 #include "gtest/gtest.h"
 
 namespace argus {

@@ -30,7 +30,7 @@
 #include "bbts/host_info_util.h"
 #include "bbts/log.h"
 #include "bbts/pb_conf.h"
-#include "bbts/tracker/Announce.h"
+#include "Announce.h"
 #include "../proto/TrackerConf.pb.h"
 
 using std::string;

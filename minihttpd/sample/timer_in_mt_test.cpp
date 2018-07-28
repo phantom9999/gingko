@@ -1,6 +1,6 @@
-#include "libminihttpd/eventloop.h"
-#include "libminihttpd/minihttpd.h"
-#include "libminihttpd/scoped_ptr.h"
+#include "minihttpd/eventloop.h"
+#include "minihttpd/minihttpd.h"
+#include "minihttpd/scoped_ptr.h"
 #include <pthread.h>
 #include <unistd.h>
 

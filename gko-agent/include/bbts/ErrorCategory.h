@@ -51,7 +51,7 @@ class ErrorCategory : public boost::system::error_category {
 public:
   ErrorCategory() {}
   virtual ~ErrorCategory(){}
-  virtual const char* name() const {
+  virtual const char* name() const BOOST_SYSTEM_NOEXCEPT {
     return name_;
   }
 

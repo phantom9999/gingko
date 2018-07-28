@@ -3,7 +3,7 @@
 #include <glog/logging.h>
 
 #include "bbts/hash_crc32.h"
-#include "bbts/tracker/redis_conf.pb.h"
+#include "redis_conf.pb.h"
 #include "bbts/StatusManager.h"
 
 using std::string;

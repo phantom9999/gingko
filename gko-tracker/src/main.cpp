@@ -1,4 +1,4 @@
-#include <signal.h>
+#include <csignal>
 
 #include <sstream>
 
@@ -17,9 +17,12 @@
 #include <thrift/transport/TBufferTransports.h>
 #include <thrift/transport/TSocket.h>
 
+#include <boost/asio/impl/src.hpp>
+#include <boost/asio/ssl/impl/src.hpp>
+
 #include "bbts/HttpServer.h"
 #include "bbts/KeyTypeRWLock.hpp"
-#include "bbts/tracker/redis_conf.pb.h"
+#include "redis_conf.pb.h"
 #include "bbts/RedisManager.h"
 #include "bbts/StatusManager.h"
 #include "Announce.h"
@@ -28,7 +31,7 @@
 #include "bbts/tracker/InfoHashGarbageCleaner.h"
 #include "bbts/tracker/PeerHandler.h"
 #include "bbts/tracker/RemotePeersSyncronizer.h"
-#include "bbts/tracker/tracker_conf.pb.h"
+#include "tracker_conf.pb.h"
 
 using std::string;
 using boost::bind;
@@ -213,8 +216,7 @@ int main(int argc, char **argv) {
         threadManager = ThreadManager::newSimpleThreadManager(tracker_conf.thread_num());
     shared_ptr< ThreadFactory > threadFactory(new PosixThreadFactory());
     threadManager->threadFactory(threadFactory);
-    g_my_server =
-        new TNonblockingServer(processor, protocolFactory, tracker_conf.port(), threadManager);
+    g_my_server = new TNonblockingServer(processor, protocolFactory, tracker_conf.port(), threadManager);
     SetSingalProcess();
 
     try {

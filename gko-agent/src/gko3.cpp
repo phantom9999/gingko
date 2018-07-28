@@ -30,9 +30,9 @@
 #include "bbts/torrent_file_util.h"
 #include "bbts/util.h"
 #include "bbts/tool/Downloader.h"
-#include "../group/group_client.h"
-#include "../group/gen-cpp/GroupManagerService.h"
-#include "../group/utils.h"
+#include "group_client.h"
+#include "GroupManagerService.h"
+#include "utils.h"
 
 using std::string;
 using std::map;
@@ -897,24 +897,24 @@ static bool AddIpFilterRule(const string &ip_range, int flags, ip_filter *filter
   }
 
   error_code ec;
-  address start_address;
-  start_address = address::from_string(v[0], ec);
+  address start_address = address::from_string(v[0], ec);
   if (ec) {
     fprintf(stderr, "address(%s) not correct: %s\n", v[0].c_str(), ec.message().c_str());
     return false;
   }
 
-  address last_address;
+  // address last_address;
   if (size == 2) {
-    last_address = address::from_string(v[1], ec);
+    address last_address = address::from_string(v[1], ec);
     if (ec) {
       fprintf(stderr, "address(%s) not correct: %s\n", v[1].c_str(), ec.message().c_str());
       return false;
     }
+    filter->add_rule(start_address, last_address, flags);
   } else {
-    last_address = start_address;
+    address last_address = start_address;
+    filter->add_rule(start_address, last_address, flags);
   }
-  filter->add_rule(start_address, last_address, flags);
   return true;
 }
 

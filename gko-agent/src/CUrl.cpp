@@ -19,7 +19,7 @@
 
 #include <curl/curl.h>
 #include <curl/easy.h>
-#include <curl/types.h>
+// #include <curl/types.h>
 
 namespace bbts {
 

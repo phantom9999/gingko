@@ -2,7 +2,7 @@
 #include <sys/types.h>
 #include <unistd.h>
 #include <signal.h>
-#include "libminihttpd/monitor_helper.h"
+#include "minihttpd/monitor_helper.h"
 #include "gtest/gtest.h"
 
 TEST(MonitorHelperTest, DataContainerTest) {

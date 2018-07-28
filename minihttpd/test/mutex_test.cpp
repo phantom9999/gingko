@@ -1,5 +1,5 @@
 #include <pthread.h>
-#include "libminihttpd/mutex.h"
+#include "minihttpd/mutex.h"
 #include "gtest/gtest.h"
 
 using ::argus::common::MutexLock;
