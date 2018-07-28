@@ -18,12 +18,26 @@ install:
 #- yum install sqlilte-devel
 
 - sudo apt-get update
-- sudo apt-get install libsqlite3-dev libhiredis-dev libgoogle-glog-dev libgflags-dev libcurl4-openssl-dev libjsoncpp-dev libevent-dev libprotobuf-dev protobuf-compiler thrift-compiler libboost1.55-all-dev
+#- sudo apt-get install libsqlite3-dev libhiredis-dev libgoogle-glog-dev libgflags-dev libcurl4-openssl-dev libjsoncpp-dev libevent-dev libprotobuf-dev protobuf-compiler thrift-compiler libboost1.55-all-dev
+- sudo apt-get install libsqlite3-dev libsqlite3-0
+- sudo apt-get install libhiredis-dev libhiredis0.10
+- sudo apt-get install libgoogle-glog-dev libgoogle-glog0
+- sudo apt-get install llibgflags-dev libgflags2
+- sudo apt-get install libcurl4-openssl-dev
+- sudo apt-get install libjsoncpp-dev libjsoncpp0
+- sudo apt-get install libevent-dev libevent-2.0-5 libevent-core-2.0-5 libevent-openssl-2.0-5 libevent-pthreads-2.0-5
+- sudo apt-get install libprotobuf-dev protobuf-compiler libprotobuf8
+- sudo apt-get install libboost1.55-all-dev
+
+
 
 script:
+# 生成thrift, protobuf
 - sh build.sh
-- mkdir torrent_build && cd torrent_build && ../libtorrent-rasterbar/configure --prefix=`pwd`/../torrent && make -j4
-
+# 构建torrent
+- mkdir torrent_build && cd torrent_build && ../libtorrent-rasterbar/configure --prefix=`pwd`/../thrid-party/torrent && make -j4 && make install
+# 构建
+- mkdir build && cd build && cmake .. && make -j4
 
 #after_success:
 #- hexo deploy
