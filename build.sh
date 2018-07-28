@@ -11,7 +11,7 @@ for file_item in $file_list
 do
     echo $file_item
     file_dirname=`dirname $file_item`
-    $PROTOC --cpp_out=$file_dirname --proto_path=$file_dirname --proto_path=third-party/protobuf/include $file_item
+    $PROTOC --cpp_out=$file_dirname --proto_path=$file_dirname --proto_path=$file_dirname $file_item
 done
 
 

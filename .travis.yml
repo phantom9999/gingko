@@ -22,6 +22,8 @@ install:
 
 script:
 - sh build.sh
+- mkdir torrent_build && cd torrent_build && ../libtorrent-rasterbar/configure --prefix=`pwd`/../torrent && make -j4
+
 
 #after_success:
 #- hexo deploy
