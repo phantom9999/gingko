@@ -1,5 +1,7 @@
 #! /bin/sh
 
+set +x
+
 readonly PATH='/usr/sbin:/usr/bin:/sbin:/bin'
 cd "`dirname $0`/../bin" || exit 1
 
