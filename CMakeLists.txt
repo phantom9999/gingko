@@ -43,21 +43,21 @@ set(CMAKE_LIBRARY_PATH ${lib_dir})
 
 ########################################################################
 # sqlite
-#include_directories(sqlite)
-#add_library(
-#        sqlite3
-#        sqlite/sqlite3.c
-#)
-#add_executable(
-#        sqlite3-cmd
-#        sqlite/shell.c
-#)
-#target_link_libraries(
-#        sqlite3-cmd
-#        sqlite3
-#        pthread
-#        dl
-#)
+include_directories(sqlite)
+add_library(
+        sqlite3
+        sqlite/sqlite3.c
+)
+add_executable(
+        sqlite3-cmd
+        sqlite/shell.c
+)
+target_link_libraries(
+        sqlite3-cmd
+        sqlite3
+        pthread
+        dl
+)
 
 ########################################################################
 # minihttpd
