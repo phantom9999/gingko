@@ -1,7 +1,7 @@
 language: cpp
 compiler: gcc
 os: centos
-
+sudo: true
 #cache:
 #  directories:
 #  - node_modules
@@ -17,9 +17,7 @@ install:
 #- yum install hiredis-devel
 #- yum install sqlilte-devel
 
-- apt-get install libsqlite3-dev libhiredis-dev \
- libgoogle-glog-dev libgflags-dev libcurl4-openssl-dev \
- libjsoncpp-dev libevent-dev libprotobuf-dev protobuf-compiler thrift-compiler
+- sudo apt-get install libsqlite3-dev libhiredis-dev libgoogle-glog-dev libgflags-dev libcurl4-openssl-dev libjsoncpp-dev libevent-dev libprotobuf-dev protobuf-compiler thrift-compiler
 
 script:
 - build.sh
