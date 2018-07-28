@@ -6,16 +6,16 @@ os: centos
 #  directories:
 #  - node_modules
 install:
-- yum install thrift-devel
-- yum install protobuf-devel
-- yum install libevent-devel
-- yum install log4cpp-devel
-- yum install json-cpp-devel
-- yum install libcurl-devel
-- yum install gflags-devel
-- yum install glog-devel
-- yum install hiredis-devel
-- yum install sqlilte-devel
+#- yum install thrift-devel
+#- yum install protobuf-devel
+#- yum install libevent-devel
+#- yum install log4cpp-devel
+#- yum install json-cpp-devel
+#- yum install libcurl-devel
+#- yum install gflags-devel
+#- yum install glog-devel
+#- yum install hiredis-devel
+#- yum install sqlilte-devel
 
 - apt-get install libsqlite3-dev libhiredis-dev \
  libgoogle-glog-dev libgflags-dev libcurl4-openssl-dev \
