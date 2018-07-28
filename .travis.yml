@@ -17,6 +17,7 @@ install:
 #- yum install hiredis-devel
 #- yum install sqlilte-devel
 
+- sudo apt-get update
 - sudo apt-get install libsqlite3-dev libhiredis-dev libgoogle-glog-dev libgflags-dev libcurl4-openssl-dev libjsoncpp-dev libevent-dev libprotobuf-dev protobuf-compiler thrift-compiler
 
 script:
