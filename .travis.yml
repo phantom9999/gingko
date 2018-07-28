@@ -35,7 +35,7 @@ script:
 # 生成thrift, protobuf
 - sh build.sh
 # 构建torrent
-- mkdir torrent_build && cd torrent_build && ../libtorrent-rasterbar/configure --prefix=`pwd`/../thrid-party/torrent && make -j4 && make install
+- mkdir torrent_build && cd torrent_build && ../libtorrent-rasterbar/configure --prefix=`pwd`/../thrid-party/torrent && make -j4 && make install && cd -
 # 构建
 - mkdir build && cd build && cmake .. && make -j4
 
