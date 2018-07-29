@@ -58,7 +58,7 @@ bool RedisManager::ConnectRedis(const RedisServer &server, redisContext **contex
     struct timeval timeout = {timeout_ / 1000, timeout_ % 1000 * 1000};
     redisContext *c = redisConnectWithTimeout(server.hostname.c_str(), server.port, timeout);
     if (c->err) {
-        LOG(WARNING) << "Connection error with " << server.hostname << ": " << c->errstr;
+        // LOG(WARNING) << "Connection error with " << server.hostname << ": " << c->errstr;
         redisFree(c);
         return false;
     }
@@ -170,7 +170,7 @@ void RedisManager::DoConnection() {
                 context.flag = true;
                 LOG(INFO) << "connect " << server.hostname << " succes";
             } else {
-                LOG(WARNING) << "Can not connect " << server.hostname;
+                // LOG(WARNING) << "Can not connect " << server.hostname;
             }
         }
     }

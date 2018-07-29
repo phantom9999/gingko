@@ -72,26 +72,36 @@ do { \
 #define FATAL_LOG(fmt, arg...) \
 do { \
   log4cpp::Category::getRoot().fatal(LOGINFO() fmt, ##arg); \
+  fprintf(stderr, fmt, ##arg); \
+  fprintf(stderr, "\n"); \
 } while (0)
 
 #define WARNING_LOG(fmt, arg...) \
 do { \
   log4cpp::Category::getRoot().warn(LOGINFO() fmt, ##arg); \
+  fprintf(stderr, fmt, ##arg); \
+fprintf(stderr, "\n"); \
 } while (0)
 
 #define NOTICE_LOG(fmt, arg...) \
 do { \
   log4cpp::Category::getRoot().notice(LOGINFO() fmt, ##arg); \
+  fprintf(stderr, fmt, ##arg); \
+fprintf(stderr, "\n"); \
 } while (0)
 
 #define TRACE_LOG(fmt, arg...) \
 do { \
   log4cpp::Category::getRoot().info(LOGINFO() fmt, ##arg); \
+  fprintf(stderr, fmt, ##arg); \
+fprintf(stderr, "\n"); \
 } while (0)
 
 #define DEBUG_LOG(fmt, arg...) \
 do { \
   log4cpp::Category::getRoot().debug(LOGINFO() fmt, ##arg); \
+  fprintf(stderr, fmt, ##arg); \
+fprintf(stderr, "\n"); \
 } while (0)
 
 #endif // if BUILD_BAIDU

@@ -23,7 +23,7 @@
 #include <boost/unordered_map.hpp>
 #include <libtorrent/alert_types.hpp>
 
-#include "../../../proto/message.pb.h"
+#include "message.pb.h"
 #include "bbts/statistics.h"
 #include "bbts/ThriftTracker.h"
 #include "bbts/UnixSocketServer.h"

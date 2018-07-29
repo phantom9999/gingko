@@ -1,6 +1,6 @@
 #include "bbts/encode.h"
 
-#include <cstdint>
+#include <stdint.h>
 
 #include <string>
 #include <iostream>

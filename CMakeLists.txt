@@ -1,11 +1,18 @@
 cmake_minimum_required(VERSION 2.8)
 project(gingko)
 
-set(CMAKE_CXX_STANDARD 11)
+#set(CMAKE_VERBOSE_MAKEFILE ON)
+
+#set(CMAKE_CXX_STANDARD 11)
 
 ########################################################################
 # 设置依赖
-set(CMAKE_CXX_FLAGS "-g -fPIC -Wall -pipe -w -fpermissive -Wno-deprecated -Wno-unused-function -Wno-unused-parameter -Wno-invalid-offsetof -Winline -Wpointer-arith -Wwrite-strings -Woverloaded-virtual -ftemplate-depth-128 -Wreorder -Wswitch -Wformat")
+set(CMAKE_CXX_FLAGS " -g3 -fPIC -Wall -pipe -W -fpermissive -ftemplate-depth-128 ")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated -Wno-unused-function -Wno-unused-parameter -Wno-invalid-offsetof ")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated -Wno-unused-function -Wno-unused-parameter ")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Winline -Wpointer-arith -Wwrite-strings -Woverloaded-virtual -Wreorder -Wswitch -Wformat ")
+
+
 
 set(
         third
