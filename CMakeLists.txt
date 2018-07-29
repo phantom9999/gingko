@@ -30,9 +30,21 @@ set(
         /third-party/torrent
 )
 add_definitions(
-        -DBOOST_ASIO_SEPARATE_COMPILATION
+        -D_XOPEN_SOURE=500
+        -D_GNU_SOURCE
         -DHAVE_NETINET_IN_H
-#        -DBOOST_ASIO_HEADER_ONLY
+        -DHAVE_NETDB_H=1
+        -DGINGKO_VERSION=${GINGKO_VERSION}
+        -DTORRENT_NO_DEPRECATE=1
+        -DTORRENT_DISABLE_ENCRYPTION=1
+        -DTORRENT_DISABLE_GEO_IP=1
+        -DTORRENT_DISABLE_DHT=1
+        -DBOOST_ASIO_HASH_MAP_BUCKETS=1021
+        -DBOOST_ASIO_SEPARATE_COMPILATION=1
+        -DBOOST_ASIO_HAS_EPOLL=1
+        #-DTORRENT_DEBUG=1
+        -DBOOST_EXCEPTION_DISABLE=1
+        -DBOOST_ASIO_ENABLE_CANCELIO=1
 )
 
 include_directories(libtorrent-rasterbar/include)
